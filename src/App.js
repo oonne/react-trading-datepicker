@@ -21,19 +21,26 @@ class App extends Component {
     })
   }
 
+  getTradingListDemo () {
+    let tradingList = [];
+    let curDate = new Date();
+    for (let i=0; i<30; i++) {
+      let thisDate = new Date(curDate.getTime() + i*24*60*60*1000);
+      if (thisDate.getDay()>0 && thisDate.getDay()<6) {
+        tradingList.push(DateUtil.getYYYYMMDD(thisDate))
+      }
+    }
+
+    return tradingList;
+  }
+
   render() {
     let date = this.state.date;
-    let tradingList = [
-      '2018-07-30',
-      '2018-07-31',
-      '2018-08-01',
-      '2018-08-02',
-      '2018-08-03',
-    ]
+    let tradingList = this.getTradingListDemo();
 
     return (
       <div className="App">
-        <Datepicker value={date} tradingList={tradingList} onChange={this.onChange.bind(this)} />
+        <Datepicker value={date} tradingList={tradingList} onChange={this.onChange} />
       </div>
     );
   }
