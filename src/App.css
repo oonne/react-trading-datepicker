@@ -1,0 +1,9 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #eee;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
