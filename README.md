@@ -1,10 +1,10 @@
-# react-textarta
+# react-trading-datepicker
 ------------
 
-Textarea  for self-adaptation height
+A trading date picker component
 
 ### Demo
-[Demo](https://oonne.github.io/react-textarea/build/)
+[Demo](https://oonne.github.io/react-trading-datepicker/build/)
 
 ### How to start
 * install dependencies
@@ -19,9 +19,10 @@ Textarea  for self-adaptation height
 ### Description
 
 ``` javascript
-import Textarta from './component/Textarta'
+import Datepicker from './component/Datepicker'
 
-<Textarta
+<Datepicker
   value={value}
+  tradingList={tradingList}
   onChange={this.onChange.bind(this)}
 />
